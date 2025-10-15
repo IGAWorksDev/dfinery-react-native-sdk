@@ -1,0 +1,75 @@
+name: Publish Package to npmjs
+
+on:
+  push:
+    tags:
+    - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  after-publish:
+    needs: publish
+    if: always()
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.PAT }}
+    steps:
+    - name: Check publish status
+      run: echo "Publish status = ${{ needs.publish.result }}"
+
+    - name: Checkout infra repo
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ github.repository_owner }}/${{ vars.INFRA_REPO }}
+        ref: main
+        path: infra
+        token: ${{ secrets.PAT }}
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      working-directory: infra
+      run: |
+        npm install
+
+    - name: Run slack-notifier.mjs
+      id: slack-notifier
+      if: always()
+      working-directory: infra
+      env:
+        INTERNAL_REPO_NAME: ${{ vars.INTERNAL_REPO }}
+        REF_NAME: ${{ github.ref_name }}
+        REPO: ${{ github.repository }}
+        DEPLOYMENT_STATUS: ${{ job.status }}
+        SLACK_WEBHOOK_TOKEN: ${{ secrets.SLACK_WEBHOOK_TOKEN }}
+        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+      run: |
+        node scripts/slack-notifier-completion.mjs notify-deployment-completion-from-issue >> "$GITHUB_OUTPUT"
+        
+    - name: Close issue if success
+      if: success()
+      working-directory: infra
+      env:
+        GITHUB_TOKEN:     ${{ secrets.PAT }}
+        ISSUE_REPO_OWNER: ${{ github.repository_owner }}
+        ISSUE_REPO_NAME:  ${{ vars.INTERNAL_REPO }}
+        ISSUE_NUMBER:     ${{ steps.slack-notifier.outputs.issue_number }}
+        STATUS:           ${{ job.status }}
+      run: node scripts/issue-closer.mjs    

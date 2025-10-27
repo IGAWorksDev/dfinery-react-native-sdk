@@ -1,0 +1,39 @@
+
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+apply plugin: "com.android.library"
+
+android {
+ namespace "com.igaworks.dfineryreactnativesdk"
+  compileSdkVersion safeExtGet('compileSdkVersion', 34)
+
+  defaultConfig {
+    minSdkVersion safeExtGet('minSdkVersion', 19)
+    targetSdkVersion safeExtGet('targetSdkVersion', 34)
+
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+  implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
+  implementation 'com.igaworks.dfinery:android-sdk:2.4.3'
+  implementation 'androidx.core:core:1.2.0'
+  implementation 'com.google.android.gms:play-services-appset:16.0.2'
+  implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+  implementation 'com.google.firebase:firebase-messaging:24.0.0'
+}
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

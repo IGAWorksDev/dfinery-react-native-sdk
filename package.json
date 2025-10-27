@@ -1,0 +1,24 @@
+{
+  "name": "@igaworks/dfinery-react-native-sdk",
+  "version": "1.0.2",
+  "description": "Dfinery SDK for React Native.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "dfinery",
+    "igaworks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IGAWorksDev/dfinery-react-native-sdk.git"
+  },
+  "author": "IGAWORKS <dfn_dev@igaworks.com> (https://www.dfinery.io)",
+  "license": "COMMERCIAL",
+  "homepage": "https://docs.dfinery.ai/developer-guide/platform/reactnative",
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  }
+}

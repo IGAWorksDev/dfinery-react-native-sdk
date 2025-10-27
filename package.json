@@ -4,6 +4,7 @@
   "description": "Dfinery SDK for React Native.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
+  "source": "src/index.js",
   "keywords": [
     "react-native",
     "ios",

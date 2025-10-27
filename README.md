@@ -19,4 +19,4 @@ npm install @igaworks/dfinery-react-native-sdk
 
 ### 🗄️ Changelog
 
-Click [here](./CHANGELOG.md) to view the Android SDK Changelog.
+Click [here](https://docs.dfinery.ai/developer-guide/platform/reactnative/change-log) to view the SDK Changelog.

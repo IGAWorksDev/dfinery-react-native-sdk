@@ -49,7 +49,7 @@ const sdkInit = () => {
     [DFConfig.ANDROID_NOTIFICATION_CHANNEL_ID]: 'com.dfineryreactnativesdkexample.notificationChannel',
     [DFConfig.ANDROID_NOTIFICATION_ACCENT_COLOR]: '#FF3700B3'
   };
-  Dfinery.initWithConfig("ft6im2", config);
+  Dfinery.initWithConfig("SERVICE_ID", config);
 };
 
 const createAndroidNotificationChannel = () =>{

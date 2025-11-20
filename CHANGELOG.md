@@ -1,6 +1,18 @@
 <details open>
 <summary>EN</summary>
 
+
+## 1.0.3 (2025-11-20)
+
+##### Changed
+- Reinstall logic changed [iOS]
+
+##### Versions
+
+- **Android**
+  - Dfinery Android SDK 2.4.3
+- **iOS**
+  - Dfinery iOS SDK 2.3.3
 ## 1.0.2 (2025-10-27)
 
 ##### Fixed
@@ -46,6 +58,18 @@
 <details open>
 <summary>KO</summary>
 
+
+## 1.0.3 (2025-11-20)
+
+##### 변경됨
+- 재설치 로직 수정 [iOS]
+
+##### 버전 정보
+
+- **Android**
+  - Dfinery Android SDK 2.4.3
+- **iOS**
+  - Dfinery iOS SDK 2.3.3
 ## 1.0.2 (2025-10-27)
 
 ##### 고쳐짐

@@ -68,12 +68,22 @@ export interface DFIdentity {
 }
 
 export interface DFConfig {
+  /** @deprecated Use IOS_LOG_LEVEL instead. */
   readonly IOS_LOG_ENABLE: 'df_config_log_enable';
+  readonly IOS_LOG_LEVEL: 'df_config_log_level';
   readonly ANDROID_LOG_ENABLE: 'android_log_enable';
   readonly ANDROID_LOG_LEVEL: 'android_log_level';
   readonly ANDROID_NOTIFICATION_ICON_NAME: 'android_notification_icon_name';
   readonly ANDROID_NOTIFICATION_CHANNEL_ID: 'android_notification_channel_id';
   readonly ANDROID_NOTIFICATION_ACCENT_COLOR: 'android_notification_accent_color';
+}
+
+export interface DFIOSLogLevel {
+  readonly VERBOSE: 2;
+  readonly DEBUG: 3;
+  readonly INFO: 4;
+  readonly WARN: 5;
+  readonly ERROR: 6;
 }
 
 export interface DFAndroidLogLevel {
@@ -158,6 +168,7 @@ export declare const DFUserProfile: DFUserProfile;
 export declare const DFGender: DFGender;
 export declare const DFIdentity: DFIdentity;
 export declare const DFConfig: DFConfig;
+export declare const DFIOSLogLevel: DFIOSLogLevel;
 export declare const DFAndroidLogLevel: DFAndroidLogLevel;
 export declare const DFAndroidNotificationChannelProperty: DFAndroidNotificationChannelProperty;
 export declare const DFAndroidNotificationChannelGroupProperty: DFAndroidNotificationChannelGroupProperty;

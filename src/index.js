@@ -30,9 +30,18 @@ export default class Dfinery {
   }
 
   static setUserProfile(key, value) {
+    // key가 없거나 value가 정의되지 않은 경우 무시
+    if (!key || value === undefined) {
+      console.warn(`Invalid input: key=${key}, value=${value}`);
+      return;
+    }
     if (Platform.OS === 'android') {
       if (typeof value === 'number') {
-        if (value % 1 === 0) {
+        // NaN이나 무한대(Infinity) 체크
+        if (!Number.isFinite(value)) return;
+
+        // Number.isInteger를 사용하여 소수점이 없는지 확인
+        if (Number.isInteger(value)) {
           bridge.setUserProfileLong(key, value);
         } else {
           bridge.setUserProfileDouble(key, value);
@@ -45,6 +54,8 @@ export default class Dfinery {
         bridge.setUserProfileArray(key, value);
       } else if (value instanceof Date && !isNaN(value.getTime())) {
         bridge.setUserProfileString(key, value.toISOString());
+      } else if (value === null){
+        bridge.setUserProfileString(key, null);
       }
     } else if (Platform.OS === 'ios') {
       if (value instanceof Date && !isNaN(value.getTime())) {
@@ -170,6 +181,7 @@ export {
   DFGender,
   DFIdentity,
   DFConfig,
+  DFIOSLogLevel,
   DFAndroidLogLevel,
   DFAndroidNotificationChannelProperty,
   DFAndroidNotificationChannelGroupProperty,

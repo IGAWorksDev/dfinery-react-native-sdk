@@ -12,7 +12,17 @@ RCT_EXPORT_METHOD(init:(NSString *)serviceId)
 
 RCT_EXPORT_METHOD(initWithConfig:(NSString *)serviceId config:(NSDictionary *)config)
 {
-    [[DfinerySDKManager shared] initSDKWithServiceId:serviceId config:config];
+    NSDictionary *normalizedConfig = config;
+    
+    if ([config isKindOfClass:[NSDictionary class]]) {
+        NSMutableDictionary *mutableConfig = [config mutableCopy];
+        if (mutableConfig[@"df_config_log_level"] != nil) {
+            [mutableConfig removeObjectForKey:@"df_config_log_enable"];
+        }
+        normalizedConfig = [mutableConfig copy];
+    }
+    
+    [[DfinerySDKManager shared] initSDKWithServiceId:serviceId config:normalizedConfig];
 }
 
 RCT_EXPORT_METHOD(logEvent:(NSString *)eventName properties:(NSDictionary *)properties)

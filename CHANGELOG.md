@@ -3,6 +3,18 @@
 
 
 
+
+## 1.0.5 (2026-04-14)
+
+##### Fixed
+- fixed a bug where in-app messages were not displayed when the end time was earlier than the start time [iOS]
+
+##### Versions
+
+- **Android**
+  - Dfinery Android SDK 2.6.0
+- **iOS**
+  - Dfinery iOS SDK 2.4.1
 ## 1.0.4 (2026-01-15)
 
 ##### Fixed
@@ -73,6 +85,18 @@
 
 
 
+
+## 1.0.5 (2026-04-14)
+
+##### 고쳐짐
+- 인앱메시지 스케줄 세부 설정에서 시작 시간보다 종료 시간이 이전인 경우, 인앱메시지가 미노출 되는 버그 수정 [iOS]
+
+##### 버전 정보
+
+- **Android**
+  - Dfinery Android SDK 2.6.0
+- **iOS**
+  - Dfinery iOS SDK 2.4.1
 ## 1.0.4 (2026-01-15)
 
 ##### 고쳐짐

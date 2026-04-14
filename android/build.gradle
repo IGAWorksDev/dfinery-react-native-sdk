@@ -25,7 +25,7 @@ android {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
   implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
-  implementation 'com.igaworks.dfinery:android-sdk:2.4.6'
+  implementation 'com.igaworks.dfinery:android-sdk:2.6.0'
   implementation 'androidx.core:core:1.2.0'
   implementation 'com.google.android.gms:play-services-appset:16.0.2'
   implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'

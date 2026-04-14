@@ -66,12 +66,26 @@ export const DFIdentity = {
 };
 
 export const DFConfig = {
+  /** @deprecated Use IOS_LOG_LEVEL instead. */
   IOS_LOG_ENABLE: 'df_config_log_enable',
+  /**
+   * iOS log level config key.
+   * Use this key with one of DFIOSLogLevel values.
+   */
+  IOS_LOG_LEVEL: 'df_config_log_level',
   ANDROID_LOG_ENABLE: 'android_log_enable',
   ANDROID_LOG_LEVEL: 'android_log_level',
   ANDROID_NOTIFICATION_ICON_NAME: 'android_notification_icon_name',
   ANDROID_NOTIFICATION_CHANNEL_ID: 'android_notification_channel_id',
   ANDROID_NOTIFICATION_ACCENT_COLOR: 'android_notification_accent_color'
+};
+
+export const DFIOSLogLevel = {
+  VERBOSE: 2,
+  DEBUG: 3,
+  INFO: 4,
+  WARN: 5,
+  ERROR: 6,
 };
 
 export const DFAndroidLogLevel = {

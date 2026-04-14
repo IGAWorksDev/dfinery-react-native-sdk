@@ -140,13 +140,13 @@ public class DfineryReactNativeSdkModule extends ReactContextBaseJavaModule impl
     }
 
     @ReactMethod
-    public void setUserProfileDouble(String key, Double value) {
+    public void setUserProfileDouble(String key, double value) {
         DfineryProperties.setUserProfile(key, value);
     }
 
     @ReactMethod
-    public void setUserProfileLong(String key, Double value) {
-        DfineryProperties.setUserProfile(key, value);
+    public void setUserProfileLong(String key, double value) {
+        DfineryProperties.setUserProfile(key, (long)value);
     }
 
     @ReactMethod

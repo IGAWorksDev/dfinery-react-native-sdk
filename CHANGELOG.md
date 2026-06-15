@@ -4,6 +4,29 @@
 
 
 
+
+## 1.1.0 (2026-06-15)
+
+##### Changed
+- Improved logic to handle service ID changes. [iOS]
+
+##### Fixed
+- Enhanced Data Integrity: Resolved an issue where user identity was incorrectly mapped for events triggered before SDK initialization. [Android]
+
+##### Enhancement
+- Stabilized Push Receipt Reporting: Optimized the delivery mechanism to prevent missing push receipt logs in background and Doze mode on Android 13+. [Android]
+- Standardized Platform Logic: Unified data formats across platforms (iOS/Web) and optimized immediate data transmission upon any identity update. [Android]
+- Added Intent Extra keys to support direct utilization of push click data. [Android]
+  - `com.igaworks.dfinery.push.extra.IS_DFINERY_PUSH` (Boolean): A flag to verify if the notification was sent by Dfinery.
+  - `com.igaworks.dfinery.push.extra.PUSH_PAYLOAD` (String/JSON): The full raw data of the received push notification.
+  - `com.igaworks.dfinery.push.extra.CLICK_RESULT` (String/JSON): Refined click action data based on the clicked area.
+
+##### Versions
+
+- **Android**
+  - Dfinery Android SDK 2.7.0
+- **iOS**
+  - Dfinery iOS SDK 2.5.0
 ## 1.0.5 (2026-04-14)
 
 ##### Fixed
@@ -86,6 +109,29 @@
 
 
 
+
+## 1.1.0 (2026-06-15)
+
+##### 변경됨
+- 서비스 ID 변경 시 로직 수정 [iOS]
+
+##### 고쳐짐
+- 데이터 정합성 강화: SDK 초기화 이전 호출된 이벤트의 사용자 식별 정보가 잘못 매핑되는 오류를 해결했습니다. [Android]
+
+##### 개선
+- 광고 푸시 수신 리포트 안정화: Android 13 이상 및 백그라운드/Doze 환경에서 푸시 수신 리포팅이 누락되지 않도록 전송 방식을 개선했습니다. [Android]
+- 플랫폼 로직 표준화: 타 플랫폼(iOS/Web)과 데이터 포맷을 동일하게 맞추고, 식별 정보 변경 시 데이터 전송이 즉각 이루어지도록 최적화했습니다. [Android]
+- 푸시 클릭 시 전달되는 데이터를 직접 활용할 수 있도록 Intent Extra 키를 추가했습니다. [Android]
+  - `com.igaworks.dfinery.push.extra.IS_DFINERY_PUSH` (Boolean): Dfinery에서 발송한 푸시인지 확인하는 플래그
+  - `com.igaworks.dfinery.push.extra.PUSH_PAYLOAD` (String/JSON): 수신된 푸시 알림의 전체 원본 데이터
+  - `com.igaworks.dfinery.push.extra.CLICK_RESULT` (String/JSON): 사용자가 클릭한 지점에 대해 정제된 클릭 액션 정보
+
+##### 버전 정보
+
+- **Android**
+  - Dfinery Android SDK 2.7.0
+- **iOS**
+  - Dfinery iOS SDK 2.5.0
 ## 1.0.5 (2026-04-14)
 
 ##### 고쳐짐

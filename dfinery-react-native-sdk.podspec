@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.header_dir = "DfineryReactNativeSdk"
   
   s.dependency "React-Core"
-  s.dependency "DfinerySDK", "2.4.1"
-  s.dependency "DfinerySDKServiceExtension", "2.4.1"
+  s.dependency "DfinerySDK", "2.5.0"
+  s.dependency "DfinerySDKServiceExtension", "2.5.0"
 end

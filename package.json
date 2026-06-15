@@ -1,6 +1,6 @@
 {
   "name": "@igaworks/dfinery-react-native-sdk",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Dfinery SDK for React Native.",
   "main": "src/index.js",
   "types": "src/index.d.ts",

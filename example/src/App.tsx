@@ -9,15 +9,25 @@ import { requestTrackingPermission } from "react-native-tracking-transparency";
 export default function App() {
 
   useEffect(() => {
-    sdkInit();
-    createAndroidNotificationChannel();
-    refreshPushToken();
-    refreshGoogleAdvertisingId();
-    requestNotificationPermission();
+    initializeApp();
     return () => {
       
     };
   }, []);
+
+const initializeApp = async () => {
+  // 1. SDK 초기화
+  sdkInit();
+  createAndroidNotificationChannel();
+  
+  // 2. 푸시 알림 권한 요청
+  // 권한 허용 시 react-native-permissions가 registerForRemoteNotifications 호출
+  // APNs 토큰은 비동기로 도착하며, SDK swizzler가 자동으로 캡처함
+  await requestNotificationPermission();
+  
+  // 3. 광고 ID 갱신
+  refreshGoogleAdvertisingId();
+};
 
   return (
     <SafeAreaView style={styles.container}>
@@ -34,6 +44,8 @@ export default function App() {
             <Text style={styles.titleText}>Identity</Text>
             <Button title="setIdentity" onPress={onPressSetIdentity} />
             <Button title="setIdentities" onPress={onPressSetIdentities} />
+            <Text style={styles.titleText}>Push Token</Text>
+            <Button title="Refresh Push Token" onPress={onPressRefreshPushToken} />
             <Text style={styles.titleText}>ATT (iOS)</Text>
             <Button title="Request ATT Permission" onPress={requestTrackingAuthorization} />
           </View>
@@ -77,16 +89,20 @@ const refreshGoogleAdvertisingId = () =>{
   });
 }
 
-const refreshPushToken = () => {
-  Dfinery.getPushToken().then((token)=>{
-    if(token != null){
-      console.log('Push Token:', token);
-      Dfinery.setPushToken(token);
-    }
-  }).catch((error) => {
-    console.log('Error getting push token:', error);
-  });
-}
+/**
+ * 푸시 알림 권한 요청
+ * - react-native-permissions가 권한 허용 시 registerForRemoteNotifications 자동 호출
+ * - APNs 토큰은 비동기로 도착하며, SDK swizzler가 didRegisterForRemoteNotificationsWithDeviceToken에서 캡처
+ * - 토큰이 필요한 경우 getPushToken()으로 조회 (토큰 도착 후에만 성공)
+ */
+const requestNotificationPermission = async () => {
+  try {
+    const { status, settings } = await requestNotifications(['alert', 'sound', 'badge']);
+    console.log('Notification permission:', status, settings);
+  } catch (error) {
+    console.log('Error requesting notification permission:', error);
+  }
+};
 
 const onPressLogin = () => {
   Dfinery.logEvent(DFEvent.LOGIN, null);
@@ -175,18 +191,20 @@ Dfinery.setIdentities(param);
   // Alert.alert('Set Identities button pressed');
 };
 
-const requestNotificationPermission = () => {
-  requestNotifications(['alert', 'sound']).then(({status}) => {
-    if(status === 'granted'){
-      Dfinery.getPushToken().then((token)=>{
-        Dfinery.setPushToken(token);
-      }).catch((error) => {
-        // 시뮬레이터에서는 푸시 토큰을 받을 수 없음
-        console.log('Push token not available (expected on simulator):', error.message);
-      });
+const onPressRefreshPushToken = async () => {
+  try {
+    const token = await Dfinery.getPushToken();
+    if (token) {
+      Dfinery.setPushToken(token);
+      console.log('Push token refreshed:', token);
+      Alert.alert('Push Token', `Token set: ${token.substring(0, 20)}...`);
+    } else {
+      Alert.alert('Push Token', 'Token not available');
     }
-  });
-  
+  } catch (error: any) {
+    console.log('Error refreshing push token:', error.message);
+    Alert.alert('Push Token', `Error: ${error.message}`);
+  }
 };
 
 const requestTrackingAuthorization = async () => {

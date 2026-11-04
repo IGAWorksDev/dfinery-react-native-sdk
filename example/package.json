@@ -11,20 +11,24 @@
   },
   "dependencies": {
     "@igaworks/dfinery-react-native-sdk": "file:..",
-    "react": "18.2.0",
-    "react-native": "0.74.2",
-    "react-native-permissions": "^5.4.1"
+    "react": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-permissions": "^5.4.1",
+    "react-native-tracking-transparency": "^0.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
-    "@react-native/babel-preset": "0.74.84",
-    "@react-native/metro-config": "0.74.84",
-    "@react-native/typescript-config": "0.74.84",
-    "babel-plugin-module-resolver": "^5.0.0"
+    "@babel/core": "^7.25.0",
+    "@babel/preset-env": "^7.25.0",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "^20.2.0",
+    "@react-native/babel-preset": "0.88.0",
+    "@react-native/metro-config": "0.88.0",
+    "@react-native/typescript-config": "0.88.0",
+    "@types/react": "^19.0.0",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "typescript": "^5.3.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.13.0"
   }
 }

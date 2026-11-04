@@ -1,9 +1,21 @@
 <details open>
 <summary>EN</summary>
 
+## 2.0.0 (2026-07-02)
 
+##### Added
+- Added Swift Package Manager (SPM) support for iOS [iOS]
 
+##### Changed
+- Updated iOS SDK to SPM 2.6.0 / CocoaPods 2.5.1 [iOS]
+- Updated Android SDK to 2.7.4 [Android]
 
+##### Versions
+
+- **Android**
+  - Dfinery Android SDK 2.7.4
+- **iOS**
+  - Dfinery iOS SDK 2.6.0 (SPM) / 2.5.1 (CocoaPods)
 
 ## 1.1.0 (2026-06-15)
 
@@ -106,9 +118,21 @@
 <details open>
 <summary>KO</summary>
 
+## 2.0.0 (2026-07-02)
 
+##### 추가됨
+- Swift Package Manager (SPM) 지원 추가 [iOS]
 
+##### 변경됨
+- iOS SDK SPM 2.6.0 / CocoaPods 2.5.1로 업데이트 [iOS]
+- Android SDK 2.7.4로 업데이트 [Android]
 
+##### 버전 정보
+
+- **Android**
+  - Dfinery Android SDK 2.7.4
+- **iOS**
+  - Dfinery iOS SDK 2.6.0 (SPM) / 2.5.1 (CocoaPods)
 
 ## 1.1.0 (2026-06-15)
 

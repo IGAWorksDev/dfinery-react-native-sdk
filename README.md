@@ -17,6 +17,27 @@ This project contains the Dfinery plugin, a specialized package that allows inte
 npm install @igaworks/dfinery-react-native-sdk
 ```
 
+### 📦 iOS Dependency Management
+
+Starting with React Native 0.88.0, you can choose between CocoaPods and Swift Package Manager (SPM) for iOS dependencies.
+
+#### CocoaPods (Default)
+
+For React Native projects using CocoaPods (default for RN < 0.88), no additional configuration is needed:
+
+```sh
+cd ios && pod install
+```
+
+#### Swift Package Manager (React Native 0.88.0+)
+
+For React Native 0.88.0+ projects using SPM:
+
+1. The SDK includes a `Package.swift` manifest that automatically integrates with React Native's SPM support.
+2. When building your iOS app, the dependencies will be resolved through SPM instead of CocoaPods.
+
+**Note:** SPM and CocoaPods should not be mixed for the same dependency. Choose one approach for your project.
+
 ### 🗄️ Changelog
 
 Click [here](https://docs.dfinery.ai/developer-guide/platform/reactnative/change-log) to view the SDK Changelog.

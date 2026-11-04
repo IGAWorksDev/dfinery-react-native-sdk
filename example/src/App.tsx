@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
-import { StyleSheet, View, Text, Button, Alert, SafeAreaView, ScrollView, StatusBar} from 'react-native';
-import Dfinery, { DFAndroidNotificationChannelImportance, DFAndroidNotificationChannelProperty, DFAndroidNotificationChannelVisibility, DFConfig, DFEvent, DFEventProperty, DFGender, DFIdentity, DFAndroidLogLevel, DFUserProfile} from '@igaworks/dfinery-react-native-sdk';
+import { StyleSheet, View, Text, Button, Alert, SafeAreaView, ScrollView, StatusBar, Platform} from 'react-native';
+import Dfinery, { DFAndroidNotificationChannelImportance, DFAndroidNotificationChannelProperty, DFAndroidNotificationChannelVisibility, DFConfig, DFEvent, DFEventProperty, DFGender, DFIdentity, DFAndroidLogLevel, DFUserProfile, DFIOSLogLevel} from '@igaworks/dfinery-react-native-sdk';
 
-import {RESULTS, requestNotifications } from "react-native-permissions";
+import {requestNotifications } from "react-native-permissions";
+import { requestTrackingPermission } from "react-native-tracking-transparency";
 
 export default function App() {
 
@@ -33,6 +34,8 @@ export default function App() {
             <Text style={styles.titleText}>Identity</Text>
             <Button title="setIdentity" onPress={onPressSetIdentity} />
             <Button title="setIdentities" onPress={onPressSetIdentities} />
+            <Text style={styles.titleText}>ATT (iOS)</Text>
+            <Button title="Request ATT Permission" onPress={requestTrackingAuthorization} />
           </View>
         </View>
       </ScrollView>
@@ -42,14 +45,15 @@ export default function App() {
 
 const sdkInit = () => {
   const config = {
-    [DFConfig.IOS_LOG_ENABLE]: true,
+    [DFConfig.IOS_LOG_LEVEL]: DFIOSLogLevel.VERBOSE,
     [DFConfig.ANDROID_LOG_ENABLE]: true,
     [DFConfig.ANDROID_LOG_LEVEL]: DFAndroidLogLevel.VERBOSE,
     [DFConfig.ANDROID_NOTIFICATION_ICON_NAME]: 'ic_dfinery',
     [DFConfig.ANDROID_NOTIFICATION_CHANNEL_ID]: 'com.dfineryreactnativesdkexample.notificationChannel',
     [DFConfig.ANDROID_NOTIFICATION_ACCENT_COLOR]: '#FF3700B3'
   };
-  Dfinery.initWithConfig("SERVICE_ID", config);
+  // Dfinery.initWithConfig("SERVICE_ID", config);
+  Dfinery.initWithConfig("YOUR_SERVICE_ID", config);
 };
 
 const createAndroidNotificationChannel = () =>{
@@ -172,14 +176,42 @@ Dfinery.setIdentities(param);
 };
 
 const requestNotificationPermission = () => {
-  requestNotifications(['alert', 'sound']).then(({status, settings}) => {
+  requestNotifications(['alert', 'sound']).then(({status}) => {
     if(status === 'granted'){
       Dfinery.getPushToken().then((token)=>{
         Dfinery.setPushToken(token);
+      }).catch((error) => {
+        // 시뮬레이터에서는 푸시 토큰을 받을 수 없음
+        console.log('Push token not available (expected on simulator):', error.message);
       });
     }
   });
   
+};
+
+const requestTrackingAuthorization = async () => {
+  if (Platform.OS === 'ios') {
+    const trackingStatus = await requestTrackingPermission();
+    switch (trackingStatus) {
+      case 'authorized':
+        Dfinery.attAuthorized(true);
+        Alert.alert('ATT', '추적 권한이 허용되었습니다.');
+        break;
+      case 'denied':
+      case 'restricted':
+        Dfinery.attAuthorized(false);
+        Alert.alert('ATT', '추적 권한이 거부되었습니다.');
+        break;
+      case 'unavailable':
+        Alert.alert('ATT', 'ATT를 사용할 수 없습니다. (iOS 14 미만)');
+        break;
+      case 'not-determined':
+        Alert.alert('ATT', '권한이 아직 결정되지 않았습니다.');
+        break;
+    }
+  } else {
+    Alert.alert('ATT', 'ATT 권한 요청은 iOS에서만 지원됩니다.');
+  }
 };
 
 const styles = StyleSheet.create({

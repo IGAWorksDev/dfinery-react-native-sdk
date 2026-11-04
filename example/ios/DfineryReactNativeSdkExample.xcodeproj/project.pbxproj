@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF41862565DB83894F0E61 /* SceneDelegate.swift */; };
 		3373072BFCDAE2CA5559E57F /* libPods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF1E27720A37FFD977F075B /* libPods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.a */; };
 		388068D4A831BEE00EC32B0C /* libPods-NotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C963A65633F97A8BD27DEAC7 /* libPods-NotificationServiceExtension.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -64,6 +65,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DfineryReactNativeSdkExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DfineryReactNativeSdkExample/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = DfineryReactNativeSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		26FF41862565DB83894F0E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DfineryReactNativeSdkExample/SceneDelegate.swift; sourceTree = "<group>"; };
 		5C5C4EF637044E73AF9EFE00 /* Pods-DfineryReactNativeSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfineryReactNativeSdkExample.release.xcconfig"; path = "Target Support Files/Pods-DfineryReactNativeSdkExample/Pods-DfineryReactNativeSdkExample.release.xcconfig"; sourceTree = "<group>"; };
 		7AF1E27720A37FFD977F075B /* libPods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DfineryReactNativeSdkExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		C963A65633F97A8BD27DEAC7 /* libPods-NotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9169DB98F051813C769075 /* libPods-DfineryReactNativeSdkExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DfineryReactNativeSdkExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF721BB0DE7C57F6658B1577 /* Pods-DfineryReactNativeSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfineryReactNativeSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-DfineryReactNativeSdkExample/Pods-DfineryReactNativeSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
+		ECE127C5EA1099464D16A8A9 /* DfineryReactNativeSdkExample-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DfineryReactNativeSdkExample-Bridging-Header.h"; path = "DfineryReactNativeSdkExample/DfineryReactNativeSdkExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -136,6 +139,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */,
+				26FF41862565DB83894F0E61 /* SceneDelegate.swift */,
+				ECE127C5EA1099464D16A8A9 /* DfineryReactNativeSdkExample-Bridging-Header.h */,
 			);
 			name = DfineryReactNativeSdkExample;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DfineryReactNativeSdkExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/DfineryReactNativeSdkExample/DfineryReactNativeSdkExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -632,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DfineryReactNativeSdkExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/DfineryReactNativeSdkExample/DfineryReactNativeSdkExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

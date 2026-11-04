@@ -106,6 +106,22 @@
     [[Dfinery shared] disableSDK];
 }
 
+- (void)attAuthorized:(BOOL)authorized
+{
+    // attAuthorized API requires DfinerySDK 2.6.0+
+    // CocoaPods uses 2.5.1, SPM uses 2.6.0+
+    SEL selector = @selector(attAuthorized:);
+    id target = [Dfinery shared];
+    if ([target respondsToSelector:selector]) {
+        NSMethodSignature *signature = [target methodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:target];
+        [invocation setSelector:selector];
+        [invocation setArgument:&authorized atIndex:2];
+        [invocation invoke];
+    }
+}
+
 - (void)setPushTokenWithData:(NSData *)data
 {
     [[Dfinery shared] setPushTokenWithData:data];

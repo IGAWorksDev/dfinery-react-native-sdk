@@ -99,6 +99,12 @@ export default class Dfinery {
     }
   }
 
+  static attAuthorized(authorized) {
+    if (Platform.OS === 'ios') {
+      bridge.attAuthorized(authorized);
+    }
+  }
+
   static async getGoogleAdvertisingId() {
     if (Platform.OS === 'android') {
       try {

@@ -159,6 +159,7 @@ export default class Dfinery {
   static deleteNotificationChannel(channelId: string): void;
   static createNotificationChannelGroup(properties: object | undefined | null): void;
   static deleteNotificationChannelGroup(channelGroupId: string): void;
+  static attAuthorized(authorized: boolean): void;
 }
 
 // Export const declarations

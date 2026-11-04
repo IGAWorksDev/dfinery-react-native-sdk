@@ -23,6 +23,7 @@
 - (void)resetIdentity;
 - (void)enableSDK;
 - (void)disableSDK;
+- (void)attAuthorized:(BOOL)authorized;
 - (void)setPushTokenWithData:(NSData *)data;
 - (void)pend;
 - (BOOL)canHandleForeground:(UNNotification *)notification completionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler;

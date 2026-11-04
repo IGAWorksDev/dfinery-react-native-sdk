@@ -65,6 +65,11 @@ RCT_EXPORT_METHOD(disableSDK)
     [[DfinerySDKManager shared] disableSDK];
 }
 
+RCT_EXPORT_METHOD(attAuthorized:(BOOL)authorized)
+{
+    [[DfinerySDKManager shared] attAuthorized:authorized];
+}
+
 RCT_EXPORT_METHOD(setPushToken:(NSString *)pushToken)
 {
     

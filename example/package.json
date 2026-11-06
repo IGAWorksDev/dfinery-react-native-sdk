@@ -12,7 +12,7 @@
     "clean": "./scripts/clean-ios.sh"
   },
   "dependencies": {
-    "@igaworks/dfinery-react-native-sdk": "file:..",
+    "@igaworks/dfinery-react-native-sdk": "file:../sdk",
     "react": "19.3.0",
     "react-native": "0.88.1",
     "react-native-permissions": "^5.4.1",

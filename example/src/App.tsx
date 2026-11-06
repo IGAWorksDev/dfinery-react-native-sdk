@@ -31,6 +31,9 @@ const initializeApp = async () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>🔵 SPM Build</Text>
+      </View>
       <ScrollView  style={styles.scrollView}>
         <View style={styles.category}>
           <View style={styles.column}>
@@ -236,6 +239,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
+  },
+  header: {
+    backgroundColor: '#2196F3',
+    padding: 10,
+    alignItems: 'center',
+  },
+  headerText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   scrollView:{
 

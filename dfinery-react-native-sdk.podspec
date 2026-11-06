@@ -13,9 +13,8 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "12.0" } 
   s.source       = { :git => package["repository"]["url"], :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
-  s.public_header_files = "ios/DfineryReactNativeSdk/DfineryReactNativeSdk/DfinerySDKManager.h"
-  s.header_dir = "DfineryReactNativeSdk"
+  s.source_files = "ios/**/*.{h,m,mm}"
+  s.public_header_files = "ios/DfinerySDKManager.h"
   
   s.dependency "React-Core"
   s.dependency "DfinerySDK", "2.5.1"

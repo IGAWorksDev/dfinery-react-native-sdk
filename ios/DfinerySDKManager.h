@@ -1,6 +1,11 @@
 #import <Foundation/Foundation.h>
 #import <UserNotifications/UNUserNotificationCenter.h>
+
+#if __has_include(<DfinerySDK/DfinerySDK.h>)
 #import <DfinerySDK/DfinerySDK.h>
+#else
+@import DfinerySDK;
+#endif
 
 @interface DfinerySDKManager : NSObject
 

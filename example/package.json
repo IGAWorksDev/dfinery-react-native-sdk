@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "react-native spm add --yes",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "build:android": "cd android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
-    "build:ios": "cd ios && xcodebuild -workspace DfineryReactNativeSdkExample.xcworkspace -scheme DfineryReactNativeSdkExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
-    "ios:spm": "./scripts/use-spm.sh",
-    "ios:pods": "./scripts/use-pods.sh",
-    "ios:clean": "./scripts/clean-ios.sh"
+    "build:ios": "cd ios && xcodebuild -scheme DfineryReactNativeSdkExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
+    "clean": "./scripts/clean-ios.sh"
   },
   "dependencies": {
     "@igaworks/dfinery-react-native-sdk": "file:..",

@@ -1,1 +1,12 @@
 README.md
+
+# SPM build artifacts
+ios/build/
+
+# CocoaPods - not used in SPM example
+ios/Pods/
+ios/Podfile.lock
+*.xcworkspace/
+
+# Podfile backup
+ios/Podfile.bak

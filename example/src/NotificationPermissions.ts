@@ -39,11 +39,6 @@ export interface NotificationPermissionResult {
  * Get current notification permission status
  */
 export async function getNotificationStatus(): Promise<NotificationStatus> {
-  if (Platform.OS !== 'ios') {
-    // Android handles notification permissions differently (POST_NOTIFICATIONS in Android 13+)
-    return 'unavailable';
-  }
-
   if (!NativeModule) {
     console.warn('NotificationPermissions native module not found');
     return 'unavailable';
@@ -54,27 +49,12 @@ export async function getNotificationStatus(): Promise<NotificationStatus> {
 
 /**
  * Request notification permissions
- * @param options - Array of notification options to request
+ * @param options - Array of notification options to request (iOS only)
  * @returns Promise with permission result including status, granted flag, and settings
  */
 export async function requestNotificationPermission(
   options: NotificationOption[] = ['alert', 'badge', 'sound']
 ): Promise<NotificationPermissionResult> {
-  if (Platform.OS !== 'ios') {
-    return {
-      status: 'unavailable',
-      granted: false,
-      settings: {
-        alert: false,
-        badge: false,
-        sound: false,
-        lockScreen: false,
-        notificationCenter: false,
-        carPlay: false,
-      },
-    };
-  }
-
   if (!NativeModule) {
     console.warn('NotificationPermissions native module not found');
     return {
@@ -91,5 +71,35 @@ export async function requestNotificationPermission(
     };
   }
 
-  return NativeModule.requestPermission(options);
+  if (Platform.OS === 'ios') {
+    return NativeModule.requestPermission(options);
+  } else if (Platform.OS === 'android') {
+    // Android returns simpler result
+    const result = await NativeModule.requestPermission();
+    return {
+      status: result.status,
+      granted: result.granted,
+      settings: {
+        alert: result.granted,
+        badge: result.granted,
+        sound: result.granted,
+        lockScreen: result.granted,
+        notificationCenter: result.granted,
+        carPlay: false,
+      },
+    };
+  }
+
+  return {
+    status: 'unavailable',
+    granted: false,
+    settings: {
+      alert: false,
+      badge: false,
+      sound: false,
+      lockScreen: false,
+      notificationCenter: false,
+      carPlay: false,
+    },
+  };
 }

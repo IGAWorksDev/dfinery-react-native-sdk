@@ -31,10 +31,6 @@ const initializeApp = async () => {
 };
 
 const requestNotificationPermissionHandler = async () => {
-  if (Platform.OS !== 'ios') {
-    return;
-  }
-  
   try {
     const result = await requestNotificationPermission(['alert', 'badge', 'sound']);
     setNotificationStatus(result.status);

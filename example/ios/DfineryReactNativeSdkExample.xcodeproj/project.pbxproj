@@ -11,6 +11,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		DFN001ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN001EC2CA45674006654EE /* AppDelegate.swift */; };
 		1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF41862565DB83894F0E61 /* SceneDelegate.swift */; };
+		DFN003ED2CA45674006654EE /* NotificationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN003EC2CA45674006654EE /* NotificationPermissions.swift */; };
+		DFN004ED2CA45674006654EE /* NotificationPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFN004EC2CA45674006654EE /* NotificationPermissions.m */; };
+		DFN005ED2CA45674006654EE /* TrackingTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN005EC2CA45674006654EE /* TrackingTransparency.swift */; };
+		DFN006ED2CA45674006654EE /* TrackingTransparency.m in Sources */ = {isa = PBXBuildFile; fileRef = DFN006EC2CA45674006654EE /* TrackingTransparency.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9C84F7AA2D7A80C8008E5F7E /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C84F7A92D7A80C8008E5F7E /* NotificationService.m */; };
 		9C84F7AE2D7A80C8008E5F7E /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -66,6 +70,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DfineryReactNativeSdkExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = DfineryReactNativeSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		26FF41862565DB83894F0E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DfineryReactNativeSdkExample/SceneDelegate.swift; sourceTree = "<group>"; };
+		DFN003EC2CA45674006654EE /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationPermissions.swift; path = DfineryReactNativeSdkExample/NotificationPermissions.swift; sourceTree = "<group>"; };
+		DFN004EC2CA45674006654EE /* NotificationPermissions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NotificationPermissions.m; path = DfineryReactNativeSdkExample/NotificationPermissions.m; sourceTree = "<group>"; };
+		DFN005EC2CA45674006654EE /* TrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackingTransparency.swift; path = DfineryReactNativeSdkExample/TrackingTransparency.swift; sourceTree = "<group>"; };
+		DFN006EC2CA45674006654EE /* TrackingTransparency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TrackingTransparency.m; path = DfineryReactNativeSdkExample/TrackingTransparency.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DfineryReactNativeSdkExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C84F7A82D7A80C8008E5F7E /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
@@ -137,9 +145,13 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				DFN003EC2CA45674006654EE /* NotificationPermissions.swift */,
+				DFN004EC2CA45674006654EE /* NotificationPermissions.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */,
 				26FF41862565DB83894F0E61 /* SceneDelegate.swift */,
+				DFN005EC2CA45674006654EE /* TrackingTransparency.swift */,
+				DFN006EC2CA45674006654EE /* TrackingTransparency.m */,
 				ECE127C5EA1099464D16A8A9 /* DfineryReactNativeSdkExample-Bridging-Header.h */,
 			);
 			name = DfineryReactNativeSdkExample;
@@ -417,6 +429,10 @@
 			files = (
 				DFN001ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 				1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */,
+				DFN003ED2CA45674006654EE /* NotificationPermissions.swift in Sources */,
+				DFN004ED2CA45674006654EE /* NotificationPermissions.m in Sources */,
+				DFN005ED2CA45674006654EE /* TrackingTransparency.swift in Sources */,
+				DFN006ED2CA45674006654EE /* TrackingTransparency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

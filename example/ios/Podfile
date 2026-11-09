@@ -8,15 +8,8 @@ def node_require(script)
 end
 
 node_require('react-native/scripts/react_native_pods.rb')
-node_require('react-native-permissions/scripts/setup.rb')
 
 platform :ios, '15.1'
-prepare_react_native_project!
-
-setup_permissions([
-  'Notifications',
-  'AppTrackingTransparency'
-])
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
@@ -25,34 +18,11 @@ if linkage != nil
 end
 
 target 'DfineryReactNativeSdkExample' do
-  config = use_native_modules!
-
-  use_react_native!(
-    :path => config[:reactNativePath],
-    # An absolute path to your application root.
-    :app_path => "#{Pod::Config.instance.installation_root}/.."
-  )
+  # Pods are not used in SPM-only build
+  # This Podfile is minimal to satisfy react-native CLI requirements
 
   target 'DfineryReactNativeSdkExampleTests' do
     inherit! :complete
-    # Pods for testing
-  end
-
-  post_install do |installer|
-    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
-    react_native_post_install(
-      installer,
-      config[:reactNativePath],
-      :mac_catalyst_enabled => false,
-      # :ccache_enabled => true
-    )
-    
-    # Fix iOS deployment target for all pods
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
-      end
-    end
   end
 end
 

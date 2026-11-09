@@ -3,29 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DfineryReactNativeSdkExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DfineryReactNativeSdkExampleTests.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		DFN001ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN001EC2CA45674006654EE /* AppDelegate.swift */; };
 		1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF41862565DB83894F0E61 /* SceneDelegate.swift */; };
+		17CA21E30A8FFCB9D0FC1E35 /* ReactNativeHeaders in Frameworks */ = {isa = PBXBuildFile; productRef = 920F69A9DF98D37C8308D020 /* ReactNativeHeaders */; };
+		3F1E298E4A2D7CA403A328B5 /* ReactCodegen in Frameworks */ = {isa = PBXBuildFile; productRef = 947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */; };
+		50A8621D202A6CFB97E2C1B5 /* ReactAppDependencyProvider in Frameworks */ = {isa = PBXBuildFile; productRef = F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */; };
+		69A7AB74931112BD2779B631 /* ReactNativeDependenciesHeaders in Frameworks */ = {isa = PBXBuildFile; productRef = 8332BE36B9C49BD2E49347C1 /* ReactNativeDependenciesHeaders */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		94F7C9B714A718310DA6BE9C /* ReactHeaders in Frameworks */ = {isa = PBXBuildFile; productRef = 512EBECF5434FD7A6AF7C967 /* ReactHeaders */; };
+		9C84F7AA2D7A80C8008E5F7E /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C84F7A92D7A80C8008E5F7E /* NotificationService.m */; };
+		9C84F7AE2D7A80C8008E5F7E /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A60B2D2EBC1F3E58F49F7CFD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */; };
+		D6BD17EA9023C9F39246B71F /* Autolinked in Frameworks */ = {isa = PBXBuildFile; productRef = 3AFDEFB917B01458307FDE0A /* Autolinked */; };
+		DFN001ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN001EC2CA45674006654EE /* AppDelegate.swift */; };
 		DFN003ED2CA45674006654EE /* NotificationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN003EC2CA45674006654EE /* NotificationPermissions.swift */; };
 		DFN004ED2CA45674006654EE /* NotificationPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFN004EC2CA45674006654EE /* NotificationPermissions.m */; };
 		DFN005ED2CA45674006654EE /* TrackingTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN005EC2CA45674006654EE /* TrackingTransparency.swift */; };
 		DFN006ED2CA45674006654EE /* TrackingTransparency.m in Sources */ = {isa = PBXBuildFile; fileRef = DFN006EC2CA45674006654EE /* TrackingTransparency.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9C84F7AA2D7A80C8008E5F7E /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C84F7A92D7A80C8008E5F7E /* NotificationService.m */; };
-		9C84F7AE2D7A80C8008E5F7E /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A60B2D2EBC1F3E58F49F7CFD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */; };
-		94F7C9B714A718310DA6BE9C /* ReactHeaders in Frameworks */ = {isa = PBXBuildFile; productRef = 512EBECF5434FD7A6AF7C967 /* ReactHeaders */;};
-		17CA21E30A8FFCB9D0FC1E35 /* ReactNativeHeaders in Frameworks */ = {isa = PBXBuildFile; productRef = 920F69A9DF98D37C8308D020 /* ReactNativeHeaders */;};
-		69A7AB74931112BD2779B631 /* ReactNativeDependenciesHeaders in Frameworks */ = {isa = PBXBuildFile; productRef = 8332BE36B9C49BD2E49347C1 /* ReactNativeDependenciesHeaders */;};
-		D6BD17EA9023C9F39246B71F /* Autolinked in Frameworks */ = {isa = PBXBuildFile; productRef = 3AFDEFB917B01458307FDE0A /* Autolinked */;};
-		3F1E298E4A2D7CA403A328B5 /* ReactCodegen in Frameworks */ = {isa = PBXBuildFile; productRef = 947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */;};
-		50A8621D202A6CFB97E2C1B5 /* ReactAppDependencyProvider in Frameworks */ = {isa = PBXBuildFile; productRef = F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */;};
-		DFNSEXT001 /* DfinerySDKServiceExtension in Frameworks */ = {isa = PBXBuildFile; productRef = DFNSEXT002 /* DfinerySDKServiceExtension */;};
+		DFNSEXT001 /* DfinerySDKServiceExtension in Frameworks */ = {isa = PBXBuildFile; productRef = DFNSEXT002 /* DfinerySDKServiceExtension */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,29 +64,24 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* DfineryReactNativeSdkExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DfineryReactNativeSdkExampleTests.m; sourceTree = "<group>"; };
 		01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = DfineryReactNativeSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		074F3370C5D61C114F081477 /* ReactNativeSPM.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ReactNativeSPM.xcconfig; path = ReactNativeSPM/ReactNativeSPM.xcconfig; sourceTree = SOURCE_ROOT; };
 		13B07F961A680F5B00A75B9A /* DfineryReactNativeSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DfineryReactNativeSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFN001EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DfineryReactNativeSdkExample/AppDelegate.swift; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DfineryReactNativeSdkExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DfineryReactNativeSdkExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = DfineryReactNativeSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		26FF41862565DB83894F0E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DfineryReactNativeSdkExample/SceneDelegate.swift; sourceTree = "<group>"; };
-		DFN003EC2CA45674006654EE /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationPermissions.swift; path = DfineryReactNativeSdkExample/NotificationPermissions.swift; sourceTree = "<group>"; };
-		DFN004EC2CA45674006654EE /* NotificationPermissions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NotificationPermissions.m; path = DfineryReactNativeSdkExample/NotificationPermissions.m; sourceTree = "<group>"; };
-		DFN005EC2CA45674006654EE /* TrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackingTransparency.swift; path = DfineryReactNativeSdkExample/TrackingTransparency.swift; sourceTree = "<group>"; };
-		DFN006EC2CA45674006654EE /* TrackingTransparency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TrackingTransparency.m; path = DfineryReactNativeSdkExample/TrackingTransparency.m; sourceTree = "<group>"; };
+		2CE1B5C930A189510079DAD4 /* DfineryReactNativeSdkExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = DfineryReactNativeSdkExample.entitlements; path = DfineryReactNativeSdkExample/DfineryReactNativeSdkExample.entitlements; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DfineryReactNativeSdkExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C84F7A82D7A80C8008E5F7E /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		9C84F7A92D7A80C8008E5F7E /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		9C84F7AB2D7A80C8008E5F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFN001EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DfineryReactNativeSdkExample/AppDelegate.swift; sourceTree = "<group>"; };
+		DFN003EC2CA45674006654EE /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationPermissions.swift; path = DfineryReactNativeSdkExample/NotificationPermissions.swift; sourceTree = "<group>"; };
+		DFN004EC2CA45674006654EE /* NotificationPermissions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NotificationPermissions.m; path = DfineryReactNativeSdkExample/NotificationPermissions.m; sourceTree = "<group>"; };
+		DFN005EC2CA45674006654EE /* TrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackingTransparency.swift; path = DfineryReactNativeSdkExample/TrackingTransparency.swift; sourceTree = "<group>"; };
+		DFN006EC2CA45674006654EE /* TrackingTransparency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TrackingTransparency.m; path = DfineryReactNativeSdkExample/TrackingTransparency.m; sourceTree = "<group>"; };
 		ECE127C5EA1099464D16A8A9 /* DfineryReactNativeSdkExample-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DfineryReactNativeSdkExample-Bridging-Header.h"; path = "DfineryReactNativeSdkExample/DfineryReactNativeSdkExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		074F3370C5D61C114F081477 /* ReactNativeSPM.xcconfig */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.xcconfig;
-			name = ReactNativeSPM.xcconfig;
-			path = ReactNativeSPM/ReactNativeSPM.xcconfig;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +136,7 @@
 		13B07FAE1A68108700A75B9A /* DfineryReactNativeSdkExample */ = {
 			isa = PBXGroup;
 			children = (
+				2CE1B5C930A189510079DAD4 /* DfineryReactNativeSdkExample.entitlements */,
 				DFN001EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -229,14 +225,6 @@
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		13B07F861A680F5B00A75B9A /* DfineryReactNativeSdkExample */ = {
-			packageProductDependencies = (
-				512EBECF5434FD7A6AF7C967 /* ReactHeaders */,
-				920F69A9DF98D37C8308D020 /* ReactNativeHeaders */,
-				8332BE36B9C49BD2E49347C1 /* ReactNativeDependenciesHeaders */,
-				3AFDEFB917B01458307FDE0A /* Autolinked */,
-				947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */,
-				F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */,
-			);
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DfineryReactNativeSdkExample" */;
 			buildPhases = (
@@ -254,6 +242,14 @@
 				9C84F7AD2D7A80C8008E5F7E /* PBXTargetDependency */,
 			);
 			name = DfineryReactNativeSdkExample;
+			packageProductDependencies = (
+				512EBECF5434FD7A6AF7C967 /* ReactHeaders */,
+				920F69A9DF98D37C8308D020 /* ReactNativeHeaders */,
+				8332BE36B9C49BD2E49347C1 /* ReactNativeDependenciesHeaders */,
+				3AFDEFB917B01458307FDE0A /* Autolinked */,
+				947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */,
+				F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */,
+			);
 			productName = DfineryReactNativeSdkExample;
 			productReference = 13B07F961A680F5B00A75B9A /* DfineryReactNativeSdkExample.app */;
 			productType = "com.apple.product-type.application";
@@ -282,12 +278,6 @@
 
 /* Begin PBXProject section */
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
-			packageReferences = (
-				27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */,
-				C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */,
-				A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */,
-				DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */,
-			);
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
@@ -313,6 +303,12 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */,
+				C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */,
+				A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */,
+				DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -464,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -491,6 +488,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				INFOPLIST_FILE = DfineryReactNativeSdkExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,7 +513,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DfineryReactNativeSdkExample/DfineryReactNativeSdkExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DfineryReactNativeSdkExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -543,7 +543,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DfineryReactNativeSdkExample/DfineryReactNativeSdkExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				INFOPLIST_FILE = DfineryReactNativeSdkExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,10 +643,7 @@
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				PODFILE_DIR = "$(SRCROOT)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
@@ -723,10 +722,7 @@
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				PODFILE_DIR = "$(SRCROOT)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
@@ -748,6 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -786,6 +783,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -849,10 +847,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
 /* Begin XCLocalSwiftPackageReference section */
-		27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */ = {isa = XCLocalSwiftPackageReference; relativePath = build/xcframeworks;};
-		C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */ = {isa = XCLocalSwiftPackageReference; relativePath = build/generated/autolinking;};
-		A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */ = {isa = XCLocalSwiftPackageReference; relativePath = build/generated/ios;};
+		27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = build/xcframeworks;
+		};
+		A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = build/generated/ios;
+		};
+		C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = build/generated/autolinking;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -867,15 +875,42 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		512EBECF5434FD7A6AF7C967 /* ReactHeaders */ = {isa = XCSwiftPackageProductDependency; package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */; productName = ReactHeaders;};
-		920F69A9DF98D37C8308D020 /* ReactNativeHeaders */ = {isa = XCSwiftPackageProductDependency; package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */; productName = ReactNativeHeaders;};
-		8332BE36B9C49BD2E49347C1 /* ReactNativeDependenciesHeaders */ = {isa = XCSwiftPackageProductDependency; package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */; productName = ReactNativeDependenciesHeaders;};
-		3AFDEFB917B01458307FDE0A /* Autolinked */ = {isa = XCSwiftPackageProductDependency; package = C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */; productName = Autolinked;};
-		947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */ = {isa = XCSwiftPackageProductDependency; package = A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */; productName = ReactCodegen;};
-		F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */ = {isa = XCSwiftPackageProductDependency; package = A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */; productName = ReactAppDependencyProvider;};
-		DFNSEXT002 /* DfinerySDKServiceExtension */ = {isa = XCSwiftPackageProductDependency; package = DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */; productName = DfinerySDKServiceExtension;};
+		3AFDEFB917B01458307FDE0A /* Autolinked */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */;
+			productName = Autolinked;
+		};
+		512EBECF5434FD7A6AF7C967 /* ReactHeaders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */;
+			productName = ReactHeaders;
+		};
+		8332BE36B9C49BD2E49347C1 /* ReactNativeDependenciesHeaders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */;
+			productName = ReactNativeDependenciesHeaders;
+		};
+		920F69A9DF98D37C8308D020 /* ReactNativeHeaders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */;
+			productName = ReactNativeHeaders;
+		};
+		947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */;
+			productName = ReactCodegen;
+		};
+		DFNSEXT002 /* DfinerySDKServiceExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */;
+			productName = DfinerySDKServiceExtension;
+		};
+		F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */;
+			productName = ReactAppDependencyProvider;
+		};
 /* End XCSwiftPackageProductDependency section */
-
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }

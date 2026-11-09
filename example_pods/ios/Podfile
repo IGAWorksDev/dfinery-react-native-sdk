@@ -53,9 +53,22 @@ target 'DfineryReactNativeSdkExample' do
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
       end
     end
+    
+    # Fix NotificationServiceExtension framework search paths
+    installer.generated_projects.each do |project|
+      project.targets.each do |target|
+        target.build_configurations.each do |config|
+          xcframework_path = "#{installer.sandbox.root}/DfinerySDKServiceExtension/DfinerySDKServiceExtension.xcframework"
+          if File.exist?(xcframework_path)
+            framework_search_paths = config.build_settings['FRAMEWORK_SEARCH_PATHS'] || ['$(inherited)']
+            framework_search_paths << "\"#{installer.sandbox.root}/DfinerySDKServiceExtension\""
+            config.build_settings['FRAMEWORK_SEARCH_PATHS'] = framework_search_paths
+          end
+        end
+      end
+    end
   end
 end
 
-target 'NotificationServiceExtension' do
-  pod 'DfinerySDKServiceExtension'
-end
+# NotificationServiceExtension uses DfinerySDKServiceExtension.xcframework directly
+# without CocoaPods dependency management to avoid Xcode IDE build order issues

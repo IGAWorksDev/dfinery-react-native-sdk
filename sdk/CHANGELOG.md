@@ -1,21 +1,36 @@
 <details open>
 <summary>EN</summary>
 
-## 2.0.0 (2026-07-02)
+## [2.0.0 (2026-11-09)](https://github.com/IGAWorksDev/dfinery-react-native-sdk/releases/tag/v2.0.0)
+
+##### Breaking Changes
+- Minimum React Native version upgraded from 0.70.0 to 0.88.0
+- iOS deployment target raised from 12.0 to 15.0 (Xcode 27 minimum requirement)
 
 ##### Added
-- Added Swift Package Manager (SPM) support for iOS [iOS]
+- Swift Package Manager (SPM) support for iOS dependency management
+- Package.swift file for SPM-based iOS projects
+- `attAuthorized` API for handling App Tracking Transparency permission status
 
 ##### Changed
-- Updated iOS SDK to SPM 2.6.0 / CocoaPods 2.5.1 [iOS]
-- Updated Android SDK to 2.7.4 [Android]
+- Updated Android SDK to version 2.7.4
+- Updated iOS DfinerySDK to version 2.5.1 (CocoaPods) / 2.6.0 (SPM)
+- Updated iOS DfinerySDKServiceExtension to version 2.5.1 (CocoaPods) / 2.6.0 (SPM)
+
+##### Notes
+- For SceneDelegate lifecycle support required in Xcode 27+, refer to the [example app's SceneDelegate.swift](https://github.com/IGAWorksDev/dfinery-react-native-sdk/blob/main/example/ios/DfineryReactNativeSdkExample/SceneDelegate.swift).
+- Since the [CocoaPods Specs repository will become read-only in December 2026](https://blog.cocoapods.org/CocoaPods-Specs-Repo/), SPM is recommended for React Native iOS builds. Existing CocoaPods setup remains available at version 2.5.1.
 
 ##### Versions
 
 - **Android**
   - Dfinery Android SDK 2.7.4
-- **iOS**
-  - Dfinery iOS SDK 2.6.0 (SPM) / 2.5.1 (CocoaPods)
+- **iOS (CocoaPods)**
+  - Dfinery iOS SDK 2.5.1
+  - Dfinery iOS SDK Service Extension 2.5.1
+- **iOS (SPM)**
+  - Dfinery iOS SDK 2.6.0
+  - Dfinery iOS SDK Service Extension 2.6.0
 
 ## 1.1.0 (2026-06-15)
 
@@ -118,21 +133,36 @@
 <details open>
 <summary>KO</summary>
 
-## 2.0.0 (2026-07-02)
+## [2.0.0 (2026-11-09)](https://github.com/IGAWorksDev/dfinery-react-native-sdk/releases/tag/v2.0.0)
+
+##### 주요 변경사항 (Breaking Changes)
+- React Native 최소 버전이 0.70.0에서 0.88.0으로 업그레이드됨
+- iOS deployment target이 12.0에서 15.0으로 상향됨 (Xcode 27 최소 요구사항)
 
 ##### 추가됨
-- Swift Package Manager (SPM) 지원 추가 [iOS]
+- iOS 의존성 관리를 위한 Swift Package Manager (SPM) 지원
+- SPM 기반 iOS 프로젝트를 위한 Package.swift 파일
+- App Tracking Transparency 권한 상태 처리를 위한 `attAuthorized` API 추가
 
 ##### 변경됨
-- iOS SDK SPM 2.6.0 / CocoaPods 2.5.1로 업데이트 [iOS]
-- Android SDK 2.7.4로 업데이트 [Android]
+- Android SDK 버전 2.7.4로 업데이트
+- iOS DfinerySDK 버전 2.5.1 (CocoaPods) / 2.6.0 (SPM)으로 업데이트
+- iOS DfinerySDKServiceExtension 버전 2.5.1 (CocoaPods) / 2.6.0 (SPM)으로 업데이트
+
+##### 참고 사항
+- Xcode 27 이상에서 SceneDelegate 생명주기 대응이 필요한 경우 [example 앱의 SceneDelegate.swift](https://github.com/IGAWorksDev/dfinery-react-native-sdk/blob/main/example/ios/DfineryReactNativeSdkExample/SceneDelegate.swift)를 참고하세요.
+- [CocoaPods Specs 저장소가 2026년 12월 부로 읽기 전용으로 전환](https://blog.cocoapods.org/CocoaPods-Specs-Repo/)되므로 React Native iOS 빌드 시 SPM 사용을 권장합니다. 기존 CocoaPods 설정은 버전 2.5.1로 계속 사용 가능합니다.
 
 ##### 버전 정보
 
 - **Android**
   - Dfinery Android SDK 2.7.4
-- **iOS**
-  - Dfinery iOS SDK 2.6.0 (SPM) / 2.5.1 (CocoaPods)
+- **iOS (CocoaPods)**
+  - Dfinery iOS SDK 2.5.1
+  - Dfinery iOS SDK Service Extension 2.5.1
+- **iOS (SPM)**
+  - Dfinery iOS SDK 2.6.0
+  - Dfinery iOS SDK Service Extension 2.6.0
 
 ## 1.1.0 (2026-06-15)
 

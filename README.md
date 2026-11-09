@@ -8,8 +8,9 @@ This project contains the Dfinery plugin, a specialized package that allows inte
 ### ℹ️ Information
 - [Dfinery Android SDK](https://github.com/IGAWorksDev/dfinery-android-sdk)
 - [Dfinery iOS SDK](https://github.com/IGAWorksDev/dfinery-ios-sdk)
-- Android 4.4+ / API 19+
-- iOS 12+ / Xcode 16.0+
+- React Native 0.88.0+
+- iOS 15.0+ (Xcode 27+)
+- Android SDK 24+
 
 ### 🛠️ How to install
 
@@ -21,7 +22,14 @@ npm install @igaworks/dfinery-react-native-sdk
 
 Starting with React Native 0.88.0, you can choose between CocoaPods and Swift Package Manager (SPM) for iOS dependencies.
 
-#### CocoaPods (Default)
+#### Swift Package Manager (Recommended, React Native 0.88.0+)
+
+For React Native 0.88.0+ projects using SPM:
+
+1. The SDK includes a `Package.swift` manifest that automatically integrates with React Native's SPM support.
+2. When building your iOS app, the dependencies will be resolved through SPM instead of CocoaPods.
+
+#### CocoaPods
 
 For React Native projects using CocoaPods (default for RN < 0.88), no additional configuration is needed:
 
@@ -29,15 +37,19 @@ For React Native projects using CocoaPods (default for RN < 0.88), no additional
 cd ios && pod install
 ```
 
-#### Swift Package Manager (React Native 0.88.0+)
-
-For React Native 0.88.0+ projects using SPM:
-
-1. The SDK includes a `Package.swift` manifest that automatically integrates with React Native's SPM support.
-2. When building your iOS app, the dependencies will be resolved through SPM instead of CocoaPods.
-
-**Note:** SPM and CocoaPods should not be mixed for the same dependency. Choose one approach for your project.
+**Note:** SPM and CocoaPods should not be mixed for the same dependency. Choose one approach for your project. Since the [CocoaPods Specs repository will become read-only in December 2026](https://blog.cocoapods.org/CocoaPods-Specs-Repo/), SPM is recommended for new projects.
 
 ### 🗄️ Changelog
 
-Click [here](https://docs.dfinery.ai/developer-guide/platform/reactnative/change-log) to view the SDK Changelog.
+Click [here](./sdk/CHANGELOG.md) to view the SDK Changelog.
+
+### 📂 Example Projects
+
+This repository contains two example projects demonstrating different iOS dependency management approaches:
+
+| Project | iOS Dependency | Description |
+|---------|---------------|-------------|
+| [example](./example) | Swift Package Manager | Recommended for React Native 0.88.0+. Uses native SPM integration. |
+| [example_pods](./example_pods) | CocoaPods | For projects using CocoaPods or React Native < 0.88. |
+
+Both examples include identical functionality and demonstrate SDK integration with push notifications and tracking transparency.

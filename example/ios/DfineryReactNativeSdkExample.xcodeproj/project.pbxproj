@@ -22,6 +22,7 @@
 		D6BD17EA9023C9F39246B71F /* Autolinked in Frameworks */ = {isa = PBXBuildFile; productRef = 3AFDEFB917B01458307FDE0A /* Autolinked */;};
 		3F1E298E4A2D7CA403A328B5 /* ReactCodegen in Frameworks */ = {isa = PBXBuildFile; productRef = 947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */;};
 		50A8621D202A6CFB97E2C1B5 /* ReactAppDependencyProvider in Frameworks */ = {isa = PBXBuildFile; productRef = F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */;};
+		DFNSEXT001 /* DfinerySDKServiceExtension in Frameworks */ = {isa = PBXBuildFile; productRef = DFNSEXT002 /* DfinerySDKServiceExtension */;};
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFNSEXT001 /* DfinerySDKServiceExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +264,9 @@
 			dependencies = (
 			);
 			name = NotificationServiceExtension;
+			packageProductDependencies = (
+				DFNSEXT002 /* DfinerySDKServiceExtension */,
+			);
 			productName = NotificationServiceExtension;
 			productReference = 9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -274,6 +279,7 @@
 				27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */,
 				C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */,
 				A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */,
+				DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */,
 			);
 			isa = PBXProject;
 			attributes = {
@@ -839,6 +845,17 @@
 		A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */ = {isa = XCLocalSwiftPackageReference; relativePath = build/generated/ios;};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IGAWorksDev/dfinery-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		512EBECF5434FD7A6AF7C967 /* ReactHeaders */ = {isa = XCSwiftPackageProductDependency; package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */; productName = ReactHeaders;};
 		920F69A9DF98D37C8308D020 /* ReactNativeHeaders */ = {isa = XCSwiftPackageProductDependency; package = 27BDE9D743CB351F53154525 /* XCLocalSwiftPackageReference "build/xcframeworks" */; productName = ReactNativeHeaders;};
@@ -846,6 +863,7 @@
 		3AFDEFB917B01458307FDE0A /* Autolinked */ = {isa = XCSwiftPackageProductDependency; package = C2FECF1430FDAAE3BF355839 /* XCLocalSwiftPackageReference "build/generated/autolinking" */; productName = Autolinked;};
 		947DD5EF3BE079FB7F5AFF87 /* ReactCodegen */ = {isa = XCSwiftPackageProductDependency; package = A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */; productName = ReactCodegen;};
 		F3857EDDA38AFC0011322D6D /* ReactAppDependencyProvider */ = {isa = XCSwiftPackageProductDependency; package = A700952B9A737913514EB28F /* XCLocalSwiftPackageReference "build/generated/ios" */; productName = ReactAppDependencyProvider;};
+		DFNSEXT002 /* DfinerySDKServiceExtension */ = {isa = XCSwiftPackageProductDependency; package = DFNSEXT003 /* XCRemoteSwiftPackageReference "dfinery-ios-sdk" */; productName = DfinerySDKServiceExtension;};
 /* End XCSwiftPackageProductDependency section */
 
 	};

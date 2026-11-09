@@ -10,3 +10,6 @@ ios/Podfile.lock
 
 # Podfile backup
 ios/Podfile.bak
+
+# Dfinery SDK credentials (local only)
+src/config.local.ts

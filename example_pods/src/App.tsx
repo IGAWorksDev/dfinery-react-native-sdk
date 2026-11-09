@@ -5,6 +5,7 @@ import Dfinery, { DFAndroidNotificationChannelImportance, DFAndroidNotificationC
 
 import {requestNotifications } from "react-native-permissions";
 import { requestTrackingPermission } from "react-native-tracking-transparency";
+import { DfineryConfig } from './config';
 
 export default function App() {
 
@@ -67,8 +68,7 @@ const sdkInit = () => {
     [DFConfig.ANDROID_NOTIFICATION_CHANNEL_ID]: 'com.dfineryreactnativesdkexample.notificationChannel',
     [DFConfig.ANDROID_NOTIFICATION_ACCENT_COLOR]: '#FF3700B3'
   };
-  // Dfinery.initWithConfig("SERVICE_ID", config);
-  Dfinery.initWithConfig("YOUR_SERVICE_ID", config);
+  Dfinery.initWithConfig(DfineryConfig.serviceId, config);
 };
 
 const createAndroidNotificationChannel = () =>{

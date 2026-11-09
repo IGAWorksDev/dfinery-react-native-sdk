@@ -51,6 +51,7 @@ android/local.properties
 # iOS 빌드 파일들  
 ios/build/
 ios/Pods/
+ios/*.xcodeproj/
 *.xcworkspace
 !default.xcworkspace
 Podfile.lock

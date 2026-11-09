@@ -1,7 +1,3 @@
-// Keep React Native's SwiftPM autolinker aligned with Package.swift
-// This ensures the correct SPM module name is used during autolinking
-module.exports = {
-  spm: {
-    name: 'DfineryReactNativeSdk',
-  },
-};
+// React Native config for dfinery-react-native-sdk
+// swiftpmConfig is defined in package.json
+module.exports = {};

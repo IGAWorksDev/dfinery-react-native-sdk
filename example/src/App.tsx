@@ -4,10 +4,12 @@ import { StyleSheet, View, Text, Button, Alert, SafeAreaView, ScrollView, Status
 import Dfinery, { DFAndroidNotificationChannelImportance, DFAndroidNotificationChannelProperty, DFAndroidNotificationChannelVisibility, DFConfig, DFEvent, DFEventProperty, DFGender, DFIdentity, DFAndroidLogLevel, DFUserProfile, DFIOSLogLevel} from '@igaworks/dfinery-react-native-sdk';
 
 import { requestTrackingPermission, getTrackingStatus } from './TrackingTransparency';
+import { requestNotificationPermission, getNotificationStatus } from './NotificationPermissions';
 import { DfineryConfig } from './config';
 
 export default function App() {
   const [attStatus, setAttStatus] = useState<string>('unknown');
+  const [notificationStatus, setNotificationStatus] = useState<string>('unknown');
 
   useEffect(() => {
     initializeApp();
@@ -21,8 +23,25 @@ const initializeApp = async () => {
   sdkInit();
   createAndroidNotificationChannel();
   
-  // 2. 광고 ID 갱신
+  // 2. 푸시 알림 권한 요청
+  await requestNotificationPermissionHandler();
+  
+  // 3. 광고 ID 갱신
   refreshGoogleAdvertisingId();
+};
+
+const requestNotificationPermissionHandler = async () => {
+  if (Platform.OS !== 'ios') {
+    return;
+  }
+  
+  try {
+    const result = await requestNotificationPermission(['alert', 'badge', 'sound']);
+    setNotificationStatus(result.status);
+    console.log('Notification permission:', result.status, result.settings);
+  } catch (error) {
+    console.log('Error requesting notification permission:', error);
+  }
 };
 
   return (
@@ -45,6 +64,8 @@ const initializeApp = async () => {
             <Button title="setIdentities" onPress={onPressSetIdentities} />
             <Text style={styles.titleText}>Push Token</Text>
             <Button title="Refresh Push Token" onPress={onPressRefreshPushToken} />
+            <Button title="Request Notification Permission" onPress={requestNotificationPermissionHandler} />
+            <Text style={styles.statusText}>Notification: {notificationStatus}</Text>
             <Text style={styles.titleText}>ATT (iOS)</Text>
             <Button title="Request ATT Permission" onPress={requestTrackingAuthorization} />
             <Text style={styles.statusText}>Status: {attStatus}</Text>

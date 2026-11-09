@@ -1,31 +1,12 @@
-def node_require(script)
-  
-  require Pod::Executable.execute_command('node', ['-p',
-     "require.resolve(
-       '#{script}',
-       {paths: [process.argv[1]]},
-     )", __dir__]).strip
-end
-
-node_require('react-native/scripts/react_native_pods.rb')
+# SPM-only build - Podfile kept minimal for RN CLI compatibility
+# NotificationServiceExtension uses DfinerySDKServiceExtension via SPM (added to Xcode project manually)
 
 platform :ios, '15.1'
 
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  use_frameworks! :linkage => linkage.to_sym
-end
-
 target 'DfineryReactNativeSdkExample' do
-  # Pods are not used in SPM-only build
-  # This Podfile is minimal to satisfy react-native CLI requirements
-
-  target 'DfineryReactNativeSdkExampleTests' do
-    inherit! :complete
-  end
+  # Empty - all dependencies managed via SPM
 end
 
 target 'NotificationServiceExtension' do
-  pod 'DfinerySDKServiceExtension'
+  # DfinerySDKServiceExtension is added via SPM in Xcode project
 end

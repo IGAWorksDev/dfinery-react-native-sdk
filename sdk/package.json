@@ -39,6 +39,7 @@
   "scripts": {
     "clean": "rimraf lib && rimraf node_modules && (watchman watch-del-all || true)",
     "reset": "npm run clean && npm install",
+    "deploy:alpha": "npm publish --access public --tag alpha",
     "deploy:dry-run": "npm publish --access public --dry-run",
     "deploy": "npm publish --access public"
   }

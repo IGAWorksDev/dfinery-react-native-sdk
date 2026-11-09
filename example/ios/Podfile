@@ -1,0 +1,12 @@
+# SPM-only build - this Podfile exists only for React Native CLI project detection
+# Do NOT run 'pod install' - all dependencies are managed via Swift Package Manager
+# automaticPodsInstallation is disabled in react-native.config.js
+
+platform :ios, '15.0'
+
+# Empty targets - SPM handles all dependencies
+target 'DfineryReactNativeSdkExample' do
+end
+
+target 'NotificationServiceExtension' do
+end

@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DfineryReactNativeSdkExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DfineryReactNativeSdkExampleTests.m */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF41862565DB83894F0E61 /* SceneDelegate.swift */; };
 		3373072BFCDAE2CA5559E57F /* libPods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF1E27720A37FFD977F075B /* libPods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.a */; };
 		388068D4A831BEE00EC32B0C /* libPods-NotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C963A65633F97A8BD27DEAC7 /* libPods-NotificationServiceExtension.a */; };
@@ -19,6 +17,7 @@
 		9C84F7AE2D7A80C8008E5F7E /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C84F7A62D7A80C7008E5F7E /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A60B2D2EBC1F3E58F49F7CFD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */; };
 		C34BD97A01B8A2EB77D50564 /* libPods-DfineryReactNativeSdkExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9169DB98F051813C769075 /* libPods-DfineryReactNativeSdkExample.a */; };
+		DFN002ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFN002EC2CA45674006654EE /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +58,8 @@
 		01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = DfineryReactNativeSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		09DC745E1D8D6EB472216FA6 /* Pods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.release.xcconfig"; path = "Target Support Files/Pods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests/Pods-DfineryReactNativeSdkExample-DfineryReactNativeSdkExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* DfineryReactNativeSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DfineryReactNativeSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DfineryReactNativeSdkExample/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = DfineryReactNativeSdkExample/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DfineryReactNativeSdkExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DfineryReactNativeSdkExample/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DfineryReactNativeSdkExample/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = DfineryReactNativeSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		26FF41862565DB83894F0E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DfineryReactNativeSdkExample/SceneDelegate.swift; sourceTree = "<group>"; };
 		5C5C4EF637044E73AF9EFE00 /* Pods-DfineryReactNativeSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfineryReactNativeSdkExample.release.xcconfig"; path = "Target Support Files/Pods-DfineryReactNativeSdkExample/Pods-DfineryReactNativeSdkExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +75,7 @@
 		C963A65633F97A8BD27DEAC7 /* libPods-NotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9169DB98F051813C769075 /* libPods-DfineryReactNativeSdkExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DfineryReactNativeSdkExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF721BB0DE7C57F6658B1577 /* Pods-DfineryReactNativeSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfineryReactNativeSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-DfineryReactNativeSdkExample/Pods-DfineryReactNativeSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
+		DFN002EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DfineryReactNativeSdkExample/AppDelegate.swift; sourceTree = "<group>"; };
 		ECE127C5EA1099464D16A8A9 /* DfineryReactNativeSdkExample-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DfineryReactNativeSdkExample-Bridging-Header.h"; path = "DfineryReactNativeSdkExample/DfineryReactNativeSdkExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -131,12 +128,10 @@
 		13B07FAE1A68108700A75B9A /* DfineryReactNativeSdkExample */ = {
 			isa = PBXGroup;
 			children = (
-				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				DFN002EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				01796E27560A75A60D417A56 /* PrivacyInfo.xcprivacy */,
 				26FF41862565DB83894F0E61 /* SceneDelegate.swift */,
@@ -510,8 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				DFN002ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 				1500DBFDB0751268411EB787 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

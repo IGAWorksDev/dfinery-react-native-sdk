@@ -1,0 +1,6 @@
+// Copy this file to config.local.ts and fill in your actual credentials
+// config.local.ts is git-ignored and will not be committed
+
+export const DfineryConfig = {
+  serviceId: 'your_actual_service_id',
+};

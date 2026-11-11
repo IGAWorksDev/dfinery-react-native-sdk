@@ -1,1 +1,9 @@
 README.md
+
+# CocoaPods - not used in SPM example
+ios/Pods/
+ios/Podfile.lock
+*.xcworkspace/
+
+# Dfinery SDK credentials (local only)
+src/config.local.ts

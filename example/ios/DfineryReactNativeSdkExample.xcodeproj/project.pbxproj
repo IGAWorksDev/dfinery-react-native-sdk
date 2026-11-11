@@ -869,7 +869,7 @@
 			repositoryURL = "https://github.com/IGAWorksDev/dfinery-ios-sdk.git";
 			requirement = {
 				kind = exactVersion;
-				version = 2.6.0;
+				version = 2.6.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -24,7 +24,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/IGAWorksDev/dfinery-ios-sdk.git",
-            exact: "2.6.0"
+            exact: "2.6.1"
         ),
         // React Native dependencies - resolved from autolinker symlinks
         .package(name: "ReactNative", path: "../../../../xcframeworks"),

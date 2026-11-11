@@ -1,6 +1,6 @@
 {
   "name": "@igaworks/dfinery-react-native-sdk",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0",
   "description": "Dfinery SDK for React Native.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -28,7 +28,7 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react-native": ">=0.76.0"
+    "react-native": ">=0.88.0"
   },
   "engines": {
     "node": ">=22.13.0"

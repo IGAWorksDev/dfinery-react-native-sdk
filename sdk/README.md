@@ -9,7 +9,7 @@ React Native 앱에서 Dfinery API를 사용할 수 있는 SDK입니다.
 
 - React Native 0.88.0+
 - iOS 15.0+ (Xcode 27+)
-- Android SDK 24+
+- Android SDK 19+
 
 ## 의존성
 
@@ -21,5 +21,5 @@ React Native 앱에서 Dfinery API를 사용할 수 있는 SDK입니다.
 - [DfinerySDKServiceExtension 2.5.1](https://github.com/IGAWorksDev/dfinery-ios-sdk)
 
 ### iOS (SPM)
-- [DfinerySDK 2.6.0](https://github.com/IGAWorksDev/dfinery-ios-sdk)
-- [DfinerySDKServiceExtension 2.6.0](https://github.com/IGAWorksDev/dfinery-ios-sdk)
+- [DfinerySDK 2.6.1](https://github.com/IGAWorksDev/dfinery-ios-sdk)
+- [DfinerySDKServiceExtension 2.6.1](https://github.com/IGAWorksDev/dfinery-ios-sdk)

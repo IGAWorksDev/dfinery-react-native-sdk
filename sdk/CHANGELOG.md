@@ -1,7 +1,7 @@
 <details open>
 <summary>EN</summary>
 
-## [2.0.0 (2026-11-09)](https://github.com/IGAWorksDev/dfinery-react-native-sdk/releases/tag/v2.0.0)
+## [2.0.0 (2026-11-11)](https://github.com/IGAWorksDev/dfinery-react-native-sdk/releases/tag/v2.0.0)
 
 ##### Breaking Changes
 - Minimum React Native version upgraded from 0.70.0 to 0.88.0
@@ -14,8 +14,8 @@
 
 ##### Changed
 - Updated Android SDK to version 2.7.4
-- Updated iOS DfinerySDK to version 2.5.1 (CocoaPods) / 2.6.0 (SPM)
-- Updated iOS DfinerySDKServiceExtension to version 2.5.1 (CocoaPods) / 2.6.0 (SPM)
+- Updated iOS DfinerySDK to version 2.5.1 (CocoaPods) / 2.6.1 (SPM)
+- Updated iOS DfinerySDKServiceExtension to version 2.5.1 (CocoaPods) / 2.6.1 (SPM)
 
 ##### Notes
 - For SceneDelegate lifecycle support required in Xcode 27+, refer to the [example app's SceneDelegate.swift](https://github.com/IGAWorksDev/dfinery-react-native-sdk/blob/main/example/ios/DfineryReactNativeSdkExample/SceneDelegate.swift).
@@ -29,8 +29,8 @@
   - Dfinery iOS SDK 2.5.1
   - Dfinery iOS SDK Service Extension 2.5.1
 - **iOS (SPM)**
-  - Dfinery iOS SDK 2.6.0
-  - Dfinery iOS SDK Service Extension 2.6.0
+  - Dfinery iOS SDK 2.6.1
+  - Dfinery iOS SDK Service Extension 2.6.1
 
 ## 1.1.0 (2026-06-15)
 
@@ -133,7 +133,7 @@
 <details open>
 <summary>KO</summary>
 
-## [2.0.0 (2026-11-09)](https://github.com/IGAWorksDev/dfinery-react-native-sdk/releases/tag/v2.0.0)
+## [2.0.0 (2026-11-11)](https://github.com/IGAWorksDev/dfinery-react-native-sdk/releases/tag/v2.0.0)
 
 ##### 주요 변경사항 (Breaking Changes)
 - React Native 최소 버전이 0.70.0에서 0.88.0으로 업그레이드됨
@@ -146,8 +146,8 @@
 
 ##### 변경됨
 - Android SDK 버전 2.7.4로 업데이트
-- iOS DfinerySDK 버전 2.5.1 (CocoaPods) / 2.6.0 (SPM)으로 업데이트
-- iOS DfinerySDKServiceExtension 버전 2.5.1 (CocoaPods) / 2.6.0 (SPM)으로 업데이트
+- iOS DfinerySDK 버전 2.5.1 (CocoaPods) / 2.6.1 (SPM)으로 업데이트
+- iOS DfinerySDKServiceExtension 버전 2.5.1 (CocoaPods) / 2.6.1 (SPM)으로 업데이트
 
 ##### 참고 사항
 - Xcode 27 이상에서 SceneDelegate 생명주기 대응이 필요한 경우 [example 앱의 SceneDelegate.swift](https://github.com/IGAWorksDev/dfinery-react-native-sdk/blob/main/example/ios/DfineryReactNativeSdkExample/SceneDelegate.swift)를 참고하세요.
@@ -161,8 +161,8 @@
   - Dfinery iOS SDK 2.5.1
   - Dfinery iOS SDK Service Extension 2.5.1
 - **iOS (SPM)**
-  - Dfinery iOS SDK 2.6.0
-  - Dfinery iOS SDK Service Extension 2.6.0
+  - Dfinery iOS SDK 2.6.1
+  - Dfinery iOS SDK Service Extension 2.6.1
 
 ## 1.1.0 (2026-06-15)
 

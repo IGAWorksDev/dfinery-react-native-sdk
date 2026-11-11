@@ -1,43 +1,44 @@
 ## Dfinery React Native SDK
 
-This project contains the Dfinery plugin, a specialized package that allows integrators to use certain Dfinery APIs from React Native app code.
+React Native 앱에서 Dfinery API를 사용할 수 있는 SDK입니다.
 
-- [Dfinery User Guide](https://docs.dfinery.ai/user-guide)
 - [Dfinery Developer Guide](https://docs.dfinery.ai/developer-guide/platform/reactnative)
 
-### ℹ️ Information
-- [Dfinery Android SDK](https://github.com/IGAWorksDev/dfinery-android-sdk)
-- [Dfinery iOS SDK](https://github.com/IGAWorksDev/dfinery-ios-sdk)
-- Android 4.4+ / API 19+
-- iOS 12+ / Xcode 16.0+
+### 요구 사항
 
-### 🛠️ How to install
+- React Native 0.88.0+
+- iOS 15.0+ (Xcode 27+)
+- Android SDK 19+
+
+### 설치
 
 ```sh
 npm install @igaworks/dfinery-react-native-sdk
 ```
 
-### 📦 iOS Dependency Management
+### iOS 설정
 
-Starting with React Native 0.88.0, you can choose between CocoaPods and Swift Package Manager (SPM) for iOS dependencies.
+#### Swift Package Manager (권장)
 
-#### CocoaPods (Default)
+```sh
+cd ios && npx react-native spm --deintegrate
+```
 
-For React Native projects using CocoaPods (default for RN < 0.88), no additional configuration is needed:
+#### CocoaPods
 
 ```sh
 cd ios && pod install
 ```
 
-#### Swift Package Manager (React Native 0.88.0+)
+> SPM과 CocoaPods를 동일 프로젝트에서 혼용하지 마세요.
 
-For React Native 0.88.0+ projects using SPM:
+### 예제 프로젝트
 
-1. The SDK includes a `Package.swift` manifest that automatically integrates with React Native's SPM support.
-2. When building your iOS app, the dependencies will be resolved through SPM instead of CocoaPods.
+| 프로젝트 | iOS 의존성 | 설명 |
+|---------|-----------|------|
+| [example](./example) | SPM | 권장 |
+| [example_pods](./example_pods) | CocoaPods | 레거시 |
 
-**Note:** SPM and CocoaPods should not be mixed for the same dependency. Choose one approach for your project.
+### Changelog
 
-### 🗄️ Changelog
-
-Click [here](https://docs.dfinery.ai/developer-guide/platform/reactnative/change-log) to view the SDK Changelog.
+[CHANGELOG.md](./sdk/CHANGELOG.md)

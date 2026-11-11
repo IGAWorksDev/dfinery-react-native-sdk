@@ -1,0 +1,46 @@
+{
+  "name": "@igaworks/dfinery-react-native-sdk",
+  "version": "2.0.0",
+  "description": "Dfinery SDK for React Native.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "source": "src/index.js",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "dfinery",
+    "igaworks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IGAWorksDev/dfinery-react-native-sdk.git"
+  },
+  "author": "IGAWORKS <dfn_dev@igaworks.com> (https://www.dfinery.io)",
+  "license": "MIT",
+  "homepage": "https://docs.dfinery.ai/developer-guide/platform/reactnative",
+  "devDependencies": {
+    "@react-native/eslint-config": "^0.88.0",
+    "@types/react": "^19.0.0",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.88.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "swiftpmConfig": {
+    "name": "DfineryReactNativeSdk"
+  },
+  "scripts": {
+    "clean": "rimraf lib && rimraf node_modules && (watchman watch-del-all || true)",
+    "reset": "npm run clean && npm install",
+    "deploy:alpha": "npm publish --access public --tag alpha",
+    "deploy:dry-run": "npm publish --access public --dry-run",
+    "deploy": "npm publish --access public"
+  }
+}
